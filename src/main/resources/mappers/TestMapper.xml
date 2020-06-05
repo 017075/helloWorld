@@ -5,19 +5,20 @@
 		select * from test_user
 	</select>
     <select id="getTestUserById" parameterType="int" resultType="helloWorld.bean.TestBean">
-select * from test_user where id=#{id}
-</select>
+	select * from test_user where id=#{id}
+	</select>
     <insert id="insetTestUser" parameterType="helloWorld.bean.TestBean">
-insert into test_user (name , age , sex)
-		values(#{name},#{age},#{sex})</insert>
+	insert into test_user (name , age , sex)
+			values(#{name},#{age},#{sex})
+	</insert>
 
     <update id="updateTestUser" parameterType="helloWorld.bean.TestBean">
-update test_user set name=#{name},age=#{age},sex=#{sex}
+	update test_user set name=#{name},age=#{age},sex=#{sex}
 		where id=#{id}
-		</update>
+	</update>
     <delete id="deleteTestUser" parameterType="int">
- delete from test_user
+ 	delete from test_user
 		where id=#{id}
-		</delete>
+	</delete>
 
 </mapper>
